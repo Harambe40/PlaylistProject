@@ -9,15 +9,17 @@ public class Playlist {
      * Fields-- This will likely just need to be the ArrayList of Songs. Reference our previous problems
      * (CarDealership, Zoo) for structure on how this will look
      */
-
-
-
+    private ArrayList<Song> playlist;
+    int duration;
 
      /**
       * Constructor-- this doesn't need any parameters. You should just initialize the ArrayList and
       * then use additional methods to add Songs in one-by-one
       */
-
+    public Playlist()
+    {    
+        playlist = new ArrayList<Song>(); 
+    }
 
       
 
@@ -31,4 +33,56 @@ public class Playlist {
        * Determining the total duration of all songs
        * Removing all unliked songs from the playlist (careful with this one!)
        */
+
+    /**
+    * the 'add' method adds a new song to the playlist
+    * @param newSong the song to be added
+    */
+    public void add(Song newSong)
+    {
+        playlist.add(newSong);
+    }
+
+    public void add(String title, String artist, String duration)
+    {
+        playlist.add(new Song(title, artist, duration));
+    }
+
+    public void like(Song newSong)
+    {
+        newSong.like();
+    }
+
+    public void r(Song exSong)
+    {
+        playlist.remove(exSong);
+    }
+
+    public ArrayList<Song> getAllSongs()
+    {
+        return playlist;
+    }
+
+    public ArrayList<Song> getLikedSongs()
+    {
+        ArrayList<Song> likedPlaylist = new ArrayList<Song>();
+        for (int i = 0; i < playlist.size(); i++)
+            {
+                if (playlist.get(i).isLiked() == true)
+                {
+                    likedPlaylist.add(playlist.get(i));
+                }
+            }
+        return likedPlaylist;
+    }
+
+    public void getPlaylistDuration()
+    {
+        for (int i = 0; i < playlist.size(); i++)
+        {
+            duration += playlist.get(i).getDurationInSeconds();
+        }
+        int mins = duration /
+
+
 }
