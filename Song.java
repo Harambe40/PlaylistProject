@@ -8,7 +8,7 @@ public class Song {
 
     private String songName;
     private String artist;
-    private int duration;  // in the format (m)m:ss
+    private String duration;  // in the format (m)m:ss
     private boolean liked;
 
     /**
@@ -46,7 +46,7 @@ public class Song {
         return songName;
     }
     
-    public double getDuration()
+    public String getDuration()
     {
         return duration;
     }
