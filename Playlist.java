@@ -10,7 +10,7 @@ public class Playlist {
      * (CarDealership, Zoo) for structure on how this will look
      */
     private ArrayList<Song> playlist;
-    int duration;
+    private int duration;
 
      /**
       * Constructor-- this doesn't need any parameters. You should just initialize the ArrayList and
@@ -20,8 +20,6 @@ public class Playlist {
     {    
         playlist = new ArrayList<Song>(); 
     }
-
-      
 
       /**
        * Methods-- Remember that you need to be able to complete all of the following:
@@ -48,19 +46,27 @@ public class Playlist {
         playlist.add(new Song(title, artist, duration));
     }
 
-    public void like(Song newSong)
+    public void like(Song likeSong)
     {
-        newSong.like();
+        likeSong.like();
     }
 
-    public void r(Song exSong)
+    public void remove(Song exSong)
     {
         playlist.remove(exSong);
     }
-
-    public ArrayList<Song> getAllSongs()
+    public ArrayList<Song> allSongs()
     {
         return playlist;
+    }
+
+    public void displayAllSongs()
+    {
+        for (Song song : playlist)
+        {
+            System.out.println("'" + song.getName() + "'" + " by " + song.getArtist() + 
+            " (" + song.getTime() + ")");
+        }
     }
 
     public ArrayList<Song> getLikedSongs()
@@ -82,7 +88,19 @@ public class Playlist {
         {
             duration += playlist.get(i).getDurationInSeconds();
         }
-        int mins = duration /
-
-
+        int mins = duration / 60;
+        int secs = duration - (mins * 60);
+        String time = (mins + ":" + secs);
+        return time;
+    }
+    public void trim()
+    {
+        for (int i = 0; i < playlist.size(); i++)
+        {
+            if (playlist.get(i).isLiked() == false)
+            {
+                playlist.remove(i);
+            }
+        }
+    }
 }
