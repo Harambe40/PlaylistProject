@@ -82,7 +82,7 @@ public class Playlist {
         return likedPlaylist;
     }
 
-    public void getPlaylistDuration()
+    public String getPlaylistDuration()
     {
         for (int i = 0; i < playlist.size(); i++)
         {

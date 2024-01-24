@@ -37,7 +37,7 @@ public class PlaylistTester
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
         Bangers.displayAllSongs();
-        System.out.println;
+        System.out.println();
 
         System.out.println("\nLiking the songs in position X, Y, Z, etc....\n");
         //Once your songs are 'liked', this should be reflected in the next printout
@@ -65,7 +65,7 @@ public class PlaylistTester
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
-        Bangers.trim()
+        Bangers.trim();
 
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
