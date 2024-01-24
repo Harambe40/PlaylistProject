@@ -37,12 +37,8 @@ public class Song {
       * song easily as well!
       * What kind of mutator (setter) methods will you need?
       */
-    public void add()
-    {
-    
-    }
 
-    
+
     public String getArtist()
     {
         return artist;
@@ -53,7 +49,7 @@ public class Song {
         return songName;
     }
     
-    public String getDuration()
+    public String getTime()
     {
         return duration;
     }
@@ -76,5 +72,10 @@ public class Song {
     {
         liked = true;
     }
+
+    public void unlike()
+      {
+        liked = false;
+      }
 
 }
