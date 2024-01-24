@@ -12,6 +12,13 @@ public class Song {
     private boolean liked;
 
     /**
+     * songName(Under Control), artist(The Strokes)
+     * songName(Under the Bridge), artist(Red Hot Chili Peppers)
+     * songName(3 Peat), artist(Lil Wayne)
+     * songName(Song Cry), artist(Jay-Z)
+     * songName(Luna), artist(Smashing Pumpkins)
+     * 
+    /**
      * Constructor-- what information needs to be given to make a Song?
      * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
      */
@@ -31,7 +38,7 @@ public class Song {
       * What kind of mutator (setter) methods will you need?
       */
 
-    
+
     public String getArtist()
     {
         return artist;

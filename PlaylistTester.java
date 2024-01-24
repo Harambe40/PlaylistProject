@@ -21,6 +21,10 @@ public class PlaylistTester
          * Add some songs here. Note that the format for adding a Song to a Playlist
          * is something like...
          * p.addSong(new Song(..., ..., ...))
+         * 
+         * p.addSong(Under Control, The Strokes, 3:08)
+         * p.addSong(3 Peat, Lil Wayne, 3:21)
+         * 
          */
         Bangers.add(new Song("3 Peat", "Lil Wayne", "3:20"));
         Bangers.add(new Song(...);
