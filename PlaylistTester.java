@@ -27,19 +27,19 @@ public class PlaylistTester
          * 
          */
         Bangers.add(new Song("3 Peat", "Lil Wayne", "3:20"));
-        Bangers.add(new Song(...);
-        Bangers.add(new Song(...);
-        Bangers.add(new Song(...);
-        Bangers.add(new Song(...);
-        Bangers.add(new Song(...);
-        Bangers.add(new Song(...);
+        Bangers.add(new Song("Under Control", "The Strokes", "3:08"));
+        Bangers.add(new Song("Luna", "The Smashing Pumpkins", "3:23"));
+        Bangers.add(new Song("Never Change", "Jay-Z", "3:58"));
+        Bangers.add(new Song("Kyoto", "Phoebe Bridgers", "3:04"));
+        Bangers.add(new Song("I Know", "Fiona Apple", "4:55"));
+        Bangers.add(new Song("One Love", "Bob Marley", "2:46"));
 
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
         Bangers.displayAllSongs();
         System.out.println();
 
-        System.out.println("\nLiking the songs in position X, Y, Z, etc....\n");
+        System.out.println("\nLiking the songs in position 1, 2, and 4");
         //Once your songs are 'liked', this should be reflected in the next printout
         Bangers.like((Song) Bangers.allSongs().get(1));
         Bangers.like((Song) Bangers.allSongs().get(2));
@@ -48,7 +48,7 @@ public class PlaylistTester
         System.out.println("Printing the songs...\n");
         Bangers.displayAllSongs();
 
-        System.out.println("\nRemoving the song in position A, B, C, etc...\n");
+        System.out.println("\nRemoving the song in position 3");
         System.out.println();
         Bangers.remove((Song) Bangers.allSongs().get(3));
 
@@ -57,7 +57,7 @@ public class PlaylistTester
 
         System.out.println("\nPrinting only the liked songs...\n");
         //Your Playlist should be able to do this without looping while in main!
-        Bangers.getLikedSongs();
+        System.out.println(Bangers.getLikedSongs());
 
         System.out.println("\nPrinting the total duration of all songs...\n");
         //Note that the format should look something like minutes:seconds
